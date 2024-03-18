@@ -1,0 +1,49 @@
+name
+
+imports
+
+Size contstant grid
+Create global empty 2D array grid?
+
+# Introduction to the game
+    print: Do you want to play a game of Tic Tac Toe? 
+    Answer: y/n
+    If anwer is n:
+        print goodbye
+        end game
+
+    print: What are your names?
+    save answer: player_1, player_2
+
+    print Welcome
+    print Explanation
+
+# Set ending variables
+    Winner is false
+    Tie is false
+    turns is zero
+
+# Let players take turns (alternate) - gameloop
+    While winner and tie is false, and turns is not 9:
+        let player take a turn
+            Ask position
+            Add -1 or 1
+        Put in grid
+        Check win condition
+        turns ++1
+        Switch player (modulo 2)
+
+# no winner means tie
+    print: tie
+
+# Function: check win condition
+    print: winner, ask for retry
+
+
+Ideas to augment the code / game:
+- Mathmetical more efficient ways to check win conditions.
+- Instead of only 'y' or 'n', drop in a whole list of possible answers
+- Possibility to keep score of multiple games
+- Use sys module to make sure the user knows how to start the game ("Usage: python tictactoe.py") (so without any other arguments)
+- Get more acquainted with pygame and classes
+- unit tests
